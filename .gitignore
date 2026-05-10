@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Model weights (too large for GitHub)
+*.bin
+*.safetensors
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.torchscript
+
+# Test outputs
+test_mask_output.png
+app_log.txt
+launch_logged.bat
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Gradio temp files
+gradio_cached_examples/
+flagged/

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(nvidia-smi 2>&1)",
+      "WebSearch",
+      "PowerShell(ls \"C:\\\\Users\\\\PC\\\\Desktop\\\\Mohamed\\\\ComfyUI_windows_portable\\\\ComfyUI\\\\models\\\\IDM-VTON\\\\\" -Recurse -Depth 1 | Where-Object { $_.Extension -ne \"\" } | Select-Object Name, @{Name=\"SizeMB\";Expression={[math]::Round\\($_.Length/1MB, 1\\)}} | Sort-Object SizeMB -Descending | Select-Object -First 20)",
+      "Bash(..\\\\ComfyUI_windows_portable\\\\python_embeded\\\\python.exe test_preprocessing.py)",
+      "PowerShell(cd \"C:\\\\Users\\\\PC\\\\Desktop\\\\Mohamed\\\\IDM_VTON\"; $env:PYTHONPATH = \"C:\\\\Users\\\\PC\\\\Desktop\\\\Mohamed\\\\IDM_VTON\"; ..\\\\ComfyUI_windows_portable\\\\python_embeded\\\\python.exe app.py 2>&1 | Select-Object -First 60)",
+      "Bash(grep -E --line-buffered \"20/20|Error|Traceback|Exception|it/s\\\\]$|Exit code\")",
+      "Bash(grep -E --line-buffered \"Running on|All models|20/20|Error|Traceback|Exception|Exit code|it/s\\\\]$\")",
+      "Bash(grep -E --line-buffered \"20/20|Error|Traceback|Exception|Exit code|it/s\\\\]$\")"
+    ]
+  }
+}
